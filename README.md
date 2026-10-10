@@ -5,7 +5,7 @@
 - **Étudiante :** Nour Chtourou
 
 ## Outils
-JDK 17 (compilation avec `source` et `target` à 17), IntelliJ IDEA, Maven, Spring 6.2.8
+JDK 17 (code compilé pour Java 17), exécuté dans IntelliJ avec le JDK 27, IntelliJ IDEA, Maven, Spring 6.2.8
 
 ## Structure du projet
 - `dao` : `IDao`, `DaoIMP`
@@ -57,7 +57,7 @@ Le choix des classes ne se fait plus dans le code mais dans la configuration. Po
 
 ## Activité 1-3 : Spring avec un fichier XML
 
-**Réalisation.** `config.xml` déclare deux beans : `dao` (classe `dao.DaoIMP`) et `metier` (classe `metier.MetierIMP`, avec `<property name="dao" ref="dao"/>`). `PresentationAvecSpring` charge le contexte avec `ClassPathXmlApplicationContext("config.xml")` et récupère le bean avec `getBean`. Les dépendances Maven ajoutées au `pom.xml` sont `spring-core`, `spring-beans` et `spring-context`.
+**Réalisation.** `config.xml` déclare deux beans : `dao` (classe `dao.DaoIMP`) et `metier` (classe `metier.MetierIMP`, avec `<property name="dao" ref="dao"/>`). `PresentationAvecSpring` charge le contexte avec `ClassPathXmlApplicationContext("config.xml")` et récupère le bean avec `getBean`. Le `pom.xml` déclare les dépendances Maven `spring-core`, `spring-beans` et `spring-context`.
 
 ![Résultat de l'activité 1-3](images/activite-1-3.png)
 
